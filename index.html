@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Landing Page - Savor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    body { font-family: "Open Sans", sans-serif; color: #0c0c0c; background: #fff; overflow-x: hidden; }
+    .cursive-font { font-family: "Dancing Script", cursive; }
+    .hero-section { min-height: 100vh; background: linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=85") center/cover no-repeat; }
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link:hover, .navbar-nav .nav-link i:hover { color: #ffbe33 !important; }
+    .btn-warning { background-color: #ffbe33; border-color: #ffbe33; }
+    .btn-warning:hover { background-color: #e69c00; border-color: #e69c00; }
+    .carousel-item { min-height: 80vh; }
+    .carousel-caption { top: 0; bottom: 0; }
+    .carousel-indicators [data-bs-target] { width: 12px; height: 12px; border: 0; border-radius: 50%; background-color: #fff; transition: all .3s ease; }
+    .carousel-indicators .active { width: 17px; height: 17px; background-color: #ffbe33; }
+    .offer-image { width: 150px; height: 150px; flex: 0 0 150px; }
+    .offer-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+    .offer-image:hover img { transform: scale(1.1); }
+    .menu-nav .nav-link { color: #222831; }
+    .menu-nav .nav-link.active { background: #222831; color: #fff; }
+    .card-image { height: 230px; display: flex; justify-content: center; align-items: center; background: #f1f2f3; }
+    .card-image img { width: 190px; height: 190px; object-fit: cover; border-radius: 50%; }
+    .accordion-button { background: #222831; color: #fff; }
+    .accordion-button:focus { box-shadow: none; }
+    .accordion-button:not(.collapsed) { background: #ffbe33; color: #fff; }
+    .accordion-button::after { filter: brightness(0) invert(1); }
+    .accordion-body { background: #222831; color: #fff; }
+    .footer-section a { text-decoration: none; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+  <div id="home-section" class="hero-section">
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-1 cursive-font" href="#home-section">Savor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mx-3"><a class="nav-link active fw-medium text-white" href="#home-section">HOME</a></li>
+            <li class="nav-item mx-3"><a class="nav-link fw-medium text-white" href="#menu-section">MENU</a></li>
+            <li class="nav-item mx-3"><a class="nav-link fw-medium text-white" href="#about-section">ABOUT</a></li>
+            <li class="nav-item mx-3"><a class="nav-link fw-medium text-white" href="#book-table-section">BOOK TABLE</a></li>
+          </ul>
+          <ul class="navbar-nav d-flex flex-row align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-white fs-3 fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#signInModal" aria-label="Sign in">
+                <i class="bi bi-box-arrow-in-right"></i>
+              </a>
+            </li>
+            <li class="nav-item ms-3"><a href="#book-table-section" class="btn btn-warning text-white py-2 px-4 rounded-pill">Order Online</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators d-flex align-items-center">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-caption d-flex align-items-center start-0 end-0 text-start h-100 w-100 mb-3">
+            <div class="container"><div class="row align-items-center"><div class="col-12 col-md-6 text-start">
+              <h1 class="display-5 fw-bold cursive-font">Welcome to Savor</h1>
+              <p class="fs-5">Смачні страви, затишна атмосфера та приємний відпочинок. Завітайте до нас і відкрийте нові смаки.</p>
+              <a href="#menu-section" class="btn btn-warning text-light py-2 px-5 rounded-pill">Our Menu</a>
+            </div></div></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-flex align-items-center start-0 end-0 text-start h-100 w-100 mb-3">
+            <div class="container"><div class="row align-items-center"><div class="col-12 col-md-6 text-start">
+              <h1 class="display-5 fw-bold cursive-font">Fresh and Tasty</h1>
+              <p class="fs-5">Ми готуємо з якісних продуктів і дбаємо про кожну деталь, щоб вам хотілося повертатися.</p>
+              <a href="#book-table-section" class="btn btn-warning text-light py-2 px-5 rounded-pill">Book a Table</a>
+            </div></div></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-flex align-items-center start-0 end-0 text-start h-100 w-100 mb-3">
+            <div class="container"><div class="row align-items-center"><div class="col-12 col-md-6 text-start">
+              <h1 class="display-5 fw-bold cursive-font">Enjoy Every Moment</h1>
+              <p class="fs-5">Зустрічайтеся з друзями, проводьте час із родиною та насолоджуйтеся улюбленими стравами.</p>
+              <a href="#offers-section" class="btn btn-warning text-light py-2 px-5 rounded-pill">Special Offers</a>
+            </div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="offers-section" class="container py-5">
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-6 col-12">
+        <div class="card bg-dark text-white p-4 d-flex flex-column flex-md-row align-items-center rounded-4">
+          <div class="offer-image border border-warning border-5 rounded-circle overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" alt="Burger">
+          </div>
+          <div class="ms-md-4 mt-4 mt-md-2 text-center text-md-start">
+            <h3 class="cursive-font">Tasty Thursdays</h3><h2 class="display-5 cursive-font">20% <span class="fs-5 text-white">Off</span></h2>
+            <a href="#menu-section" class="btn btn-warning text-light py-2 px-4 rounded-pill mt-2">Order Now <i class="bi bi-basket3-fill fs-5 ms-2"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div class="card bg-dark text-white p-4 d-flex flex-column flex-md-row align-items-center rounded-4">
+          <div class="offer-image border border-warning border-5 rounded-circle overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Pizza" onerror="this.src='https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80'">
+          </div>
+          <div class="ms-md-4 mt-4 mt-md-2 text-center text-md-start">
+            <h3 class="cursive-font">Pizza Days</h3><h2 class="display-5 cursive-font">15% <span class="fs-5 text-white">Off</span></h2>
+            <a href="#menu-section" class="btn btn-warning text-light py-2 px-4 rounded-pill mt-2">Order Now <i class="bi bi-basket3-fill fs-5 ms-2"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu-section">
+    <div class="container py-5">
+      <h2 class="text-center display-5 fw-bold cursive-font mb-4">Our Menu</h2>
+      <ul class="nav nav-pills justify-content-center mb-5 menu-nav" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation"><button class="nav-link rounded-pill px-4 active" id="pills-burger-tab" data-bs-toggle="pill" data-bs-target="#pills-burger" type="button" role="tab" aria-controls="pills-burger" aria-selected="true">All</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link rounded-pill px-4" id="pills-pizza-tab" data-bs-toggle="pill" data-bs-target="#pills-pizza" type="button" role="tab" aria-controls="pills-pizza" aria-selected="false">Pizza</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link rounded-pill px-4" id="pills-pasta-tab" data-bs-toggle="pill" data-bs-target="#pills-pasta" type="button" role="tab" aria-controls="pills-pasta" aria-selected="false">Pasta</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link rounded-pill px-4" id="pills-fries-tab" data-bs-toggle="pill" data-bs-target="#pills-fries" type="button" role="tab" aria-controls="pills-fries" aria-selected="false">Fries</button></li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-burger" role="tabpanel" aria-labelledby="pills-burger-tab" tabindex="0">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col"><div class="card bg-light shadow-sm border-0 rounded-4 overflow-hidden h-100"><div class="card-image"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" alt="Classic Burger"></div><div class="card-body bg-dark text-white"><h5 class="card-title fw-bold">Classic Burger</h5><p class="card-text text-light">Соковита котлета, сир, свіжі овочі та фірмовий соус.</p></div><div class="card-footer bg-dark text-white d-flex justify-content-between align-items-center border-0"><span class="fs-5">180 грн</span><button class="btn btn-warning rounded-circle d-flex align-items-center justify-content-center" aria-label="Додати Classic Burger"><i class="bi bi-basket3-fill fs-5 text-light"></i></button></div></div></div>
+            <div class="col"><div class="card bg-light shadow-sm border-0 rounded-4 overflow-hidden h-100"><div class="card-image"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Italian Pizza"></div><div class="card-body bg-dark text-white"><h5 class="card-title fw-bold">Italian Pizza</h5><p class="card-text text-light">Тонке тісто, томатний соус, сир та ароматні спеції.</p></div><div class="card-footer bg-dark text-white d-flex justify-content-between align-items-center border-0"><span class="fs-5">220 грн</span><button class="btn btn-warning rounded-circle"><i class="bi bi-basket3-fill fs-5 text-light"></i></button></div></div></div>
+            <div class="col"><div class="card bg-light shadow-sm border-0 rounded-4 overflow-hidden h-100"><div class="card-image"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=500&q=80" alt="Pasta"></div><div class="card-body bg-dark text-white"><h5 class="card-title fw-bold">Creamy Pasta</h5><p class="card-text text-light">Паста з ніжним вершковим соусом та пармезаном.</p></div><div class="card-footer bg-dark text-white d-flex justify-content-between align-items-center border-0"><span class="fs-5">195 грн</span><button class="btn btn-warning rounded-circle"><i class="bi bi-basket3-fill fs-5 text-light"></i></button></div></div></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-pizza" role="tabpanel" aria-labelledby="pills-pizza-tab" tabindex="0">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col"><div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100"><div class="card-image"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Margherita"></div><div class="card-body bg-dark text-white"><h5 class="fw-bold">Margherita</h5><p>Класична піца з томатами та моцарелою.</p></div><div class="card-footer bg-dark text-white d-flex justify-content-between align-items-center border-0"><span class="fs-5">210 грн</span><button class="btn btn-warning rounded-circle"><i class="bi bi-basket3-fill text-light"></i></button></div></div></div>
+            <div class="col"><div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100"><div class="card-image"><img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=500&q=80" alt="Pepperoni"></div><div class="card-body bg-dark text-white"><h5 class="fw-bold">Pepperoni</h5><p>Піца з пепероні та сиром.</p></div><div class="card-footer bg-dark text-white d-flex justify-content-between align-items-center border-0"><span class="fs-5">240 грн</span><button class="btn btn-warning rounded-circle"><i class="bi bi-basket3-fill text-light"></i></button></div></div></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-pasta" role="tabpanel" aria-labelledby="pills-pasta-tab" tabindex="0">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col"><div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100"><div class="card-image"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=500&q=80" alt="Pasta"></div><div class="card-body bg-dark text-white"><h5 class="fw-bold">Pasta Carbonara</h5><p>Паста з беконом, сиром та вершковим соусом.</p></div><div class="card-footer bg-dark text-white d-flex justify-content-between align-items-center border-0"><span class="fs-5">195 грн</span><button class="btn btn-warning rounded-circle"><i class="bi bi-basket3-fill text-light"></i></button></div></div></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-fries" role="tabpanel" aria-labelledby="pills-fries-tab" tabindex="0">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col"><div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100"><div class="card-image"><img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=500&q=80" alt="French Fries"></div><div class="card-body bg-dark text-white"><h5 class="fw-bold">French Fries</h5><p>Хрустка картопля фрі з соусом на вибір.</p></div><div class="card-footer bg-dark text-white d-flex justify-content-between align-items-center border-0"><span class="fs-5">90 грн</span><button class="btn btn-warning rounded-circle"><i class="bi bi-basket3-fill text-light"></i></button></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mt-5"><a href="#book-table-section" class="btn btn-warning text-light py-2 px-5 rounded-pill">View More</a></div>
+    </div>
+  </section>
+
+  <section id="about-section" class="bg-dark text-white" style="min-height:70vh">
+    <div class="container py-5"><div class="row align-items-center g-4">
+      <div class="col-12 col-md-6 text-center order-2 order-md-1"><img class="img-fluid" style="max-width:300px" src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=700&q=85" alt="Burger"></div>
+      <div class="col-12 col-md-6 order-1 order-md-2">
+        <h2 class="display-5 fw-bold cursive-font mb-4 text-center text-md-start">We Are Savor</h2>
+        <p class="mt-4">Наш ресторан створений для тих, хто любить смачну їжу та приємну атмосферу. Ми використовуємо свіжі продукти, готуємо з турботою та прагнемо, щоб кожен гість залишився задоволеним.</p>
+        <p>У нашому меню ви знайдете страви на різний смак, а привітний персонал допоможе зробити ваш відпочинок комфортним.</p>
+        <a href="#book-table-section" class="btn btn-warning py-2 px-5 text-light rounded-pill">Read More</a>
+      </div>
+    </div></div>
+  </section>
+
+  <section id="book-table-section">
+    <div class="container py-5">
+      <h2 class="text-center display-5 fw-bold cursive-font mb-4">Book A Table</h2>
+      <div class="row g-4 align-items-stretch">
+        <div class="col-12 col-md-6 d-flex">
+          <form class="w-100 h-100 d-flex flex-column justify-content-start" onsubmit="event.preventDefault(); alert('Ваш запит на бронювання підготовлено!');">
+            <input class="form-control p-2 mb-3" type="text" placeholder="Your Name" aria-label="Your Name" required>
+            <input class="form-control p-2 mb-3" type="tel" placeholder="Phone Number" aria-label="Phone Number" required>
+            <input class="form-control p-2 mb-3" type="email" placeholder="Your Email" aria-label="Your Email" required>
+            <select class="form-select p-2 mb-3" aria-label="Number of guests"><option selected disabled>How many persons?</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5 or more</option></select>
+            <input class="form-control p-2 mb-3" type="date" aria-label="Booking date" required>
+            <button type="submit" class="btn btn-warning py-2 text-light rounded-pill align-self-start px-5">Book Now</button>
+          </form>
+        </div>
+        <div class="col-12 col-md-6 d-flex">
+          <iframe class="border-0 rounded-3 w-100" style="min-height:350px" loading="lazy" src="https://maps.google.com/maps?q=Kyiv%20Ukraine&t=&z=13&ie=UTF8&iwloc=&output=embed" title="Google map"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq-section" class="bg-dark text-white">
+    <div class="container py-5">
+      <h2 class="text-center display-5 fw-bold cursive-font mb-4">Frequently Asked Questions</h2>
+      <div class="accordion accordion-flush" id="faqAccordion" data-bs-theme="dark">
+        <div class="accordion-item mb-2"><h2 class="accordion-header" id="flush-headingOne"><button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">How do I place an order online?</button></h2><div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#faqAccordion"><div class="accordion-body rounded">Оберіть страви з меню та зв'яжіться з нами для оформлення замовлення.</div></div></div>
+        <div class="accordion-item mb-2"><h2 class="accordion-header" id="flush-headingTwo"><button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Do you offer vegetarian and vegan options?</button></h2><div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#faqAccordion"><div class="accordion-body rounded">Так, у меню є страви без м'яса. Уточнити склад можна у працівника ресторану.</div></div></div>
+        <div class="accordion-item mb-2"><h2 class="accordion-header" id="flush-headingThree"><button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">What are your opening hours?</button></h2><div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#faqAccordion"><div class="accordion-body rounded">Ми працюємо щодня з 10:00 до 22:00.</div></div></div>
+        <div class="accordion-item mb-2"><h2 class="accordion-header" id="flush-headingFour"><button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">Can I book a table in advance?</button></h2><div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#faqAccordion"><div class="accordion-body rounded">Так, ви можете скористатися формою бронювання на сайті.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section bg-dark text-light">
+    <div class="container py-5">
+      <div class="row mb-4">
+        <div class="col-md-4 mb-4 mb-md-0 text-center"><h3 class="fw-bold cursive-font mb-3">Contact Us</h3><p><i class="bi bi-geo-alt-fill me-2"></i>Україна, м. Хмільник</p><p><i class="bi bi-telephone-fill me-2"></i>+380 00 000 00 00</p><p><i class="bi bi-envelope-fill me-2"></i>info@savor.com</p></div>
+        <div class="col-md-4 mb-4 mb-md-0 text-center"><h1 class="fw-bold cursive-font mb-3">Savor</h1><p>Смачна їжа та приємна атмосфера для кожного гостя.</p><div class="d-flex justify-content-center gap-3"><a href="#" class="text-light fs-5" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" class="text-light fs-5" aria-label="Twitter"><i class="bi bi-twitter"></i></a><a href="#" class="text-light fs-5" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="#" class="text-light fs-5" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" class="text-light fs-5" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a></div></div>
+        <div class="col-md-4 mb-4 mb-md-0 text-center"><h3 class="fw-bold cursive-font mb-3">Opening Hours</h3><p>Everyday</p><p>10:00 AM - 10:00 PM</p></div>
+      </div>
+      <div class="row mt-5"><div class="col-12 text-center small"><p class="mb-1">© 2025 All Rights Reserved By Savor</p><p class="mb-0">Виконав: Ярослав Світайло | Група: __________ | Навчальний заклад: __________</p></div></div>
+    </div>
+  </footer>
+
+  <a href="#home-section" id="backToTopBtn" class="btn btn-warning rounded-circle position-fixed bottom-0 end-0 m-3 d-none" style="z-index:1050" aria-label="Back to top"><i class="bi bi-chevron-up fs-4 text-light"></i></a>
+
+  <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content bg-dark text-white">
+      <div class="modal-header border-secondary"><h5 class="modal-title cursive-font fs-2" id="signInModalLabel">Sign In</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body"><form><input type="email" class="form-control mb-3" placeholder="Email" required><input type="password" class="form-control mb-3" placeholder="Password" required><button type="submit" class="btn btn-warning w-100">Sign In</button></form><p class="mt-3 mb-0 text-center">Don't have an account? <a href="#" class="text-warning" data-bs-toggle="modal" data-bs-target="#signUpModal" data-bs-dismiss="modal">Sign Up</a></p></div>
+    </div></div>
+  </div>
+  <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content bg-dark text-white">
+      <div class="modal-header border-secondary"><h5 class="modal-title cursive-font fs-2" id="signUpModalLabel">Sign Up</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body"><form><input type="text" class="form-control mb-3" placeholder="Full Name" required><input type="email" class="form-control mb-3" placeholder="Email" required><input type="password" class="form-control mb-3" placeholder="Password" required><button type="submit" class="btn btn-warning w-100">Sign Up</button></form><p class="mt-3 mb-0 text-center">Already have an account? <a href="#" class="text-warning" data-bs-toggle="modal" data-bs-target="#signInModal" data-bs-dismiss="modal">Sign In</a></p></div>
+    </div></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script>
+    const backToTopBtn = document.getElementById("backToTopBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.classList.remove("d-none");
+        backToTopBtn.classList.add("d-block");
+      } else {
+        backToTopBtn.classList.remove("d-block");
+        backToTopBtn.classList.add("d-none");
+      }
+    };
+  </script>
+</body>
+</html>
